@@ -1,5 +1,8 @@
 
-.section { width: 800px; margin: auto; text-align: center; font-family: sans-serif; }
+.section {   width: 800px; margin: auto; text-align: center; font-family: sans-serif; }
+
+.section2 {  width: 800px; margin: auto; font-family: sans-serif;
+}
 
 .bg { background-image: url("./images/bg.png")  }
 
@@ -44,16 +47,19 @@
         background: linear-gradient(top, #3d7a80, #2f5f63);
         }
 
-.contact { background-color: #2f5f63; height: 25px;  margin: auto;
-    font-family: sans-serif; width: 800px; 
+
+.formular [type="text"]  { 
+  width: 100%; min-width: 100%; 
+  box-sizing: border-box;
+  padding: 4px;
+  outline: none;
 }
 
-.contact2 { background-color: #2f5f63; height: 75px; width: 800px; margin: auto;
-    font-family: sans-serif;
-}
 
+.contact { width: 300px; background-color: #203638; }
+.contact2 { width: 600px; height: 50px; background-color: #203638; }
 
-
+.text1 { font-size: 12px; font-family: sans-serif; color: gray;}
 
 
 
