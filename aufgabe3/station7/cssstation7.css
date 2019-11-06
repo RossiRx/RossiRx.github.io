@@ -1,0 +1,24 @@
+.bg1 {background-image: url(./images/bg.png);}
+
+.container {   position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    margin: auto;    }
+
+    .busch { position: relative; left: -80px; top: -470px;
+    } 
+    
+    .present { position: relative; left: 450px; top: 170px; }
+
+.video {  position: relative; left: 630px; top: 120px; }
+
+.text { position: relative; left: 70px; top: -550px; color: white; }
+
+.gif1 { position: relative; top: -300px; left: 50px; top: -500px; }
+
+.gif2 { position: relative; top: -300px; left: -50px; top: -250px; }
+
+.gif3 { position: relative; top: -300px; left: -150px; top: -400px; }
+
+.gif4 { position: relative; top: -300px; left: -250px; top: -220px; }

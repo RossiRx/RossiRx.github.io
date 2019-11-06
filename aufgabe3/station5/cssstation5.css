@@ -1,0 +1,14 @@
+
+.bg1 {background-image: url(./images/bg.png);}
+
+.container {   position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    margin: auto;    }
+
+.text { position: relative ; color: white;  }
+
+.h1 {color: white;}
+
+.formular { position: relative; top: -370px; left: 80px; }

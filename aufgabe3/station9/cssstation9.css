@@ -1,0 +1,58 @@
+
+.bg1 {background-image: url(./images/bg.png);}
+
+.container {   position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    margin: auto;    }
+
+.text { position: relative ; color: white; top: -450px; left: 80px;  }
+
+.band { position: relative; left: 370px; top: -130px; }
+
+.snow1 {  position: relative;
+    top: 0px;
+    left: 400px;
+    animation-name: snow;
+    animation-duration: 3s;
+    animation-delay: -1.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  }
+
+.snow2 {  position: relative;
+        top: 0px;
+        left: 600px;
+        animation-name: snow;
+        animation-duration: 3s;
+        animation-delay: -0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;  }
+
+.snow3 {  position: relative;
+        top: 0px;
+        left: 700px;
+        animation-name: snow;
+        animation-duration: 3s;
+        animation-delay: -1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;  }
+
+.snow4 {  position: relative;
+        top: 0px;
+        left: 350px;
+        animation-name: snow;
+        animation-duration: 3s;
+        animation-delay: -2.0s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;  }
+
+    @keyframes snow {
+        0%   {top:0px;}
+        25%  {top:50px;}
+        50%  {top:150px;}
+        75%  {top:350px;}
+        100% {top:600px;}
+
+
+

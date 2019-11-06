@@ -1,0 +1,15 @@
+
+.bg1 {background-image: url(./bg.png);}
+
+.container {   position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    margin: auto;    }
+
+.busch { position: relative; left: -80px; top: -470px;
+} 
+
+.pingu { position: relative; left: 250px; top: -200px; }
+
+.text { position: relative ; color: white; top: -550px; left: 100px; font-size:  }
