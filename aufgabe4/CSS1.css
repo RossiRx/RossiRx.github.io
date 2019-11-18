@@ -65,7 +65,7 @@ body { background-image: url(./images/bg.jpg); overflow: hidden; background-repe
 
 .answer4:hover {background-image: url(./images/answer_over.png); }
 
-.text {color: white; top: 30px; text-decoration: none; font-family: sans-serif; }   
+.text {color: white; top: 30px; text-decoration: none; font-family: sans-serif; width: 100%; }   
 
 .text2 { position absolute; color: white; text-align: center;
     margin-top: 10%; text-decoration: none; font-family: sans-serif;
