@@ -1,6 +1,6 @@
 
 
-var world:number = 32000;
+var world:number = (europa18+samerika18+namerika18+asien18+australien18+afrika18);
 
 var word1:string = "Die weltweiten Emissionsausstoße:";
 var empty:string = " ";

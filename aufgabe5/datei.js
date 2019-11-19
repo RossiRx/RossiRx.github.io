@@ -1,4 +1,4 @@
-var world = 32000;
+var world = (europa18 + samerika18 + namerika18 + asien18 + australien18 + afrika18);
 var word1 = "Die weltweiten Emissionsausstoße:";
 var empty = " ";
 var europa1 = "Europa";
