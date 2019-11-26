@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aufgabe 5</title>
+    <title class="title" >Aufgabe 6</title>
     <script src="./datei.js" ></script>
-    <link rel="stylesheet" href=".">
+    <link rel="stylesheet" href="aufgabe6.css">
 </head>
 <body>
     <nav>
@@ -18,35 +18,36 @@
         <img src="images/australia.png" class="australia">
     </nav>
 
-    <h1>
-        Carbon Dioxide Emissions in Europe
+    <h1 id="todo" >
+        please click on one of the continents, to see each emissions
     </h1>
+
+    <div class="chartWrapper">
+        <div class="chart"></div>
+    </div>
 
     <main>
         <section>
-            <h2>4209.3</h2>
-            <p>Emission absolute of Europe in 2018</p>
+            <h2 id="Gesamt1">-</h2>
+            <p id="Gesamt2">Emission absolute <br> in 2018</p>
         </section>
         
         <section>
-            <h2>4%</h2>
+            <h2 id="VglWelt">-</h2>
             <p>Relative to total world's emission</p>
         </section>
         
         <section>
-            <h2>1.2%</h2>
+            <h2 id="Wachstumsrate">-</h2>
             <p>Growth rate between 2008 and 2018 (in %)</p>
         </section>
         
         <section>
-            <h2>-400</h2>
+            <h2 id="Wachstumswert">-</h2>
             <p>Growth rate between 2008 and 2018 (absolute)</p>
         </section>
     </main>
 
-    <footer>
-        <p>Values in kg CO2 per TJ. Source https://www.statista.com/</p>
-    </footer>
     
 
 </body>
