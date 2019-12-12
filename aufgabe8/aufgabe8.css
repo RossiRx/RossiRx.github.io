@@ -1,0 +1,225 @@
+
+#container { position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  margin: auto;   
+
+
+}
+
+.bg {background-color: #15121a ;}
+
+
+#button1 {   
+    
+    height:150px;
+    width: 150px;
+    background: linear-gradient( #3e4375, #15172b );
+    border-radius: 15%;
+    float: left;
+    margin: 2px;
+      }
+        
+#button1:hover {
+    background: #231d41;
+    background: linear-gradient(top, #3e4375, #28214d);
+    
+        }
+
+
+#button2 {   
+    
+    height:150px;
+    width: 150px;
+    background: linear-gradient( #3e4375, #15172b );
+    border-radius: 15%;
+    float: left;
+    margin: 2px;
+            }
+              
+#button2:hover {
+    background: #231d41;
+    background: linear-gradient(top, #3e4375, #28214d);
+              }
+
+
+#button3 {   
+    
+      height:150px;
+      width: 150px;
+      background: linear-gradient( #3e4375, #15172b );
+      border-radius: 15%;
+      float: left;
+      margin: 2px;
+      }
+                    
+#button3:hover {
+      background: #231d41;
+      background: linear-gradient(top, #3e4375, #28214d);
+      }            
+
+
+#button4 {   
+    
+        height:150px;
+        width: 150px;
+        background: linear-gradient( #a72e2e, #471010 );
+        border-radius: 15%;
+        float: left;
+        clear: both;
+        margin: 2px;
+        }
+                      
+#button4:hover {
+        background: #792a2a;
+        background: linear-gradient(top, #c24c4c, #310e15);
+        }            
+
+
+#button5 {   
+    
+     height:150px;
+     width: 150px;
+     background: linear-gradient( #a72e2e, #471010);
+     border-radius: 15%;
+     float: left;
+     margin: 2px;
+          }
+                        
+#button5:hover {
+    background: #792a2a;
+    background: linear-gradient(top, #c24c4c, #310e15);
+          }            
+
+
+#button6 {   
+    
+    height:150px;
+    width: 150px;
+    background: linear-gradient( #a72e2e, #471010);
+    border-radius: 15%;
+    float: left;
+    margin: 2px;
+                 }
+                               
+#button6:hover {
+    background: #792a2a;
+    background: linear-gradient(top, #c24c4c, #310e15);
+                 }            
+
+
+#button7 {   
+    
+    height:150px;
+    width: 150px;
+    background: linear-gradient( #a72e2e, #471010);
+    border-radius: 15%;
+    float: left;
+    clear: both;
+    margin: 2px;
+                       }
+                                     
+#button7:hover {
+    background: #792a2a;
+    background: linear-gradient(top, #c24c4c, #310e15);
+                       }            
+
+
+#button8 {   
+    
+      height:150px;
+      width: 150px;
+      background: linear-gradient( #dd4b11, #811a1a);
+      border-radius: 15%;
+      float: left;
+      margin: 2px;
+                        
+                                           }
+                                                         
+#button8:hover {
+      background: #773006;
+      background: linear-gradient(top, #582303, #4b0e1b);
+                         }            
+
+
+#button9 {   
+    
+      height:150px;
+      width: 150px;
+      background: linear-gradient( #dd4b11, #811a1a);
+      border-radius: 15%;
+      float: left;
+      margin: 2px;
+                                            
+                                                               }
+                                                                             
+#button9:hover {
+      background: #773006;
+      background: linear-gradient(top, #582303, #4b0e1b);
+                }                                     
+
+
+#record {
+    
+    height:120px;
+    width: 120px;
+    background: linear-gradient( #0b8d0b, #043613);
+    border-radius: 15%;
+    float: left;
+    clear: both;
+    margin: 16px;
+    font-size: 70px;
+}
+
+#record:hover {
+    background: #10830c;
+    background: linear-gradient(top, #1dd81d, #043613);
+}               
+   
+
+#playbutton { 
+    
+    height:120px;
+    width: 120px;
+    background: linear-gradient( #0b8d0b, #043613);
+    border-radius: 15%;
+    float: left;
+    margin: 16px;
+    left: 34%;
+    font-size: 70px;
+}
+
+#playbutton:hover {
+    background: #10830c;
+    background: linear-gradient(top, #1dd81d , #043613);
+}               
+
+
+
+#erase {
+    height:120px;
+    width: 120px;
+    background: linear-gradient( #0b8d0b, #043613 );
+    border-radius: 15%;
+    float: left;
+    margin: 16px;
+    left: 34%;
+    font-size: 70px;
+}              
+
+#erase:hover {
+    background: #10830c;
+    background: linear-gradient(top, #1dd81d, #043613);
+}               
+
+#quelle {
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    transform: translate(-50%, -50%);
+    margin: auto;   
+    color: white;
+
+}
+
