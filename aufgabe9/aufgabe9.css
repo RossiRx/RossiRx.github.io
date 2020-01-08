@@ -52,3 +52,8 @@ h1 {
     border-radius: 100%;
     margin: 2px;
 }
+
+.button1:hover {
+    background: #125010;
+    background: linear-gradient(top, #083108, #043613);
+}

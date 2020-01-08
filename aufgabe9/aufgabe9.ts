@@ -43,6 +43,6 @@ function CheckedButton (clickedButton): void {
         clickedButton.classList.add("fa-check-circle");
 }
     else {
-        clickedButton.classList.remove("fa-check-circle");
+        clickedButton.classList.remove("fa-check-circle"); 
         clickedButton.classList.add("fa-circle");
 }}
