@@ -1,6 +1,3 @@
-var interval;
-var Beat = ["kick.mp3", "kick.mp3", "snare.mp3", "kick.mp3", "hihat.mp3", "kick.mp3", "snare.mp3", "kick.mp3"];
-var record = false;
 //buttons
 window.addEventListener("load", function () {
     document.querySelector("#button1").addEventListener("click", function () { PlaySample("kick.mp3"); });
@@ -16,12 +13,16 @@ window.addEventListener("load", function () {
     document.querySelector("#record").addEventListener("click", RecordBeat);
     document.querySelector("#erase").addEventListener("click", EraseBeat);
 });
+//beat array
+var array1 = ["kick.mp3", "kick.mp3", "snare.mp3", "kick.mp3", "hihat.mp3", "kick.mp3", "snare.mp3", "kick.mp3"];
 //PlaySample    
+var interval;
+var record = false;
 function PlaySample(tone) {
     var sound = new Audio("./assets/" + tone);
     sound.play();
     if (record == true) {
-        Beat.push(tone);
+        array1.push(tone);
     }
 }
 //PlayBeat
@@ -44,11 +45,11 @@ function PlayBeat() {
     }
     //Beat
     function myBeat() {
-        PlaySample(Beat[index]);
+        PlaySample(array1[index]);
         index += 1;
-        if (index > (Beat.length - 1))
+        if (index > (array1.length - 1))
             index = 0;
-        console.log(Beat[index]);
+        console.log(array1[index]);
     }
 }
 //Record
@@ -57,6 +58,6 @@ function RecordBeat() {
 }
 //Erase
 function EraseBeat() {
-    Beat.length = 0;
+    array1.length = 0;
 }
 //# sourceMappingURL=aufgabe8.js.map

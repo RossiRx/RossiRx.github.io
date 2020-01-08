@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(25, 124, 25);
+}
+
+h1 {
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 30%;
+}
+
+.amount {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+    color: white;
+}
+
+.list {
+    position: absolute;
+    left: 30%;
+    top: 60%;
+    height: 50px;
+}
+
+.entries {
+    position: absolute; 
+    top: 43%;
+    left: 37%;
+}
+
+.newtask {
+    width: 350px;
+    height: 35px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;      
+    font-size: 20px;
+}
+
+.button1 {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    top: 40%;
+    left: 30%;
+    height: 70px;
+    width: 70px;
+    background: linear-gradient(#147a19, #03360e);  
+    border-radius: 100%;
+    margin: 2px;
+}
