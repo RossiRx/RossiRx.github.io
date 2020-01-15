@@ -11,6 +11,7 @@
  * Werte, bspw. Stelle 0 im Array todosText und Stelle 0 im Array
  * todosChecked gehören zusammen zu einem ToDo.
  */
+//Objekte ... Typisierung erfolgt durch Interface
 var abc = {
     eintrag: ["Lorem", "Ipsum", "Dolor"],
     checked: [true, false, false]

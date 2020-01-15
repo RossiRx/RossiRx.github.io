@@ -15,12 +15,13 @@
 
 
 
-interface Vorlage {
+interface Vorlage {         //Interface als BluePrint für meine Objekte
     eintrag: string[];
     checked: boolean[];
 }
 
-var abc: Vorlage = {
+                            //Objekte ... Typisierung erfolgt durch Interface
+var abc: Vorlage = {                        
     eintrag: ["Lorem" , "Ipsum" , "Dolor"],
     checked: [true    , false   , false]
 };
