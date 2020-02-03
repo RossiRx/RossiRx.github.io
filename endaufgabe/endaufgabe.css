@@ -1,0 +1,239 @@
+
+.bg {
+    background-image: url("./images/bg3.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.headline {
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 39px;
+    text-align: center;
+    font-style: italic;
+    top: 50%;
+}
+
+#cardback {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: rgb(172, 171, 171);
+    
+}
+
+.field1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 800px;
+    background-color: rgb(212, 205, 205, 0.2);
+    
+}
+
+.field2 {
+    position: absolute;
+    top: 53%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    height: 190px;
+    width: 120px;
+    background-color: rgb(212, 205, 205, 0.2);
+}
+
+.field3 {
+    position: absolute;
+    top: 53%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    height: 190px;
+    width: 120px;
+    background-color: rgb(212, 205, 205, 0.2);
+}
+
+
+.field4 {
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 800px;
+    background-color: rgb(212, 205, 205, 0.2);
+}
+
+.card1 {
+    position: relative;
+    height: 170px;
+    width: 100px;
+    border-radius: 5%;
+    float: left;
+    margin-left: -20px;
+}
+
+.card2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 100px;
+    border-radius: 5%;
+    float: left;
+    
+}
+
+.card3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 170px;
+    width: 100px;
+    border-radius: 5%;
+    float: left;
+   
+}
+.card4 {
+    position: relative;
+    height: 170px;
+    width: 100px;
+    border-radius: 5%;
+    float: left;
+    margin-left: -20px;
+    border-color: black;
+    border-width: 5%;
+}
+
+
+
+
+
+
+.blue {
+    background: linear-gradient(rgb(68, 68, 240), rgb(9, 9, 109));
+    border-color: rgb(31, 28, 28);
+    border-width: 2.5px;
+    border-style: solid;
+}
+
+.blue:hover {
+    background: #402b7a;
+    
+}
+
+.blueicon {
+    color: white;
+}
+
+.red {
+    background: linear-gradient( rgb(167, 46, 46), rgb(71, 16, 16));
+    border-color: rgb(31, 28, 28);
+    border-width: 2.5px;
+    border-style: solid;
+}
+
+.red:hover {
+    background: #9b1b1b;
+}
+
+.yellow {
+    background: linear-gradient(rgb(245, 245, 3), rgb(124, 124, 1));
+    border-color: rgb(31, 28, 28);
+    border-width: 2.5px;
+    border-style: solid;
+}
+
+.yellow:hover {
+    background: rgb(233, 233, 5);
+}
+
+.green {
+    background: linear-gradient(rgb(10, 117, 10), rgb(4, 48, 4));
+    border-color: rgb(31, 28, 28);
+    border-width: 2.5px;
+    border-style: solid;
+}
+
+.green:hover {
+    background: rgb(18, 78, 18);
+}
+
+.hidden {
+    background: linear-gradient(rgb(51, 49, 49), rgb(36, 34, 34));
+    border-color: rgb(31, 28, 28);
+    border-width: 2.5px;
+    border-style: solid;
+
+}
+
+.top {
+    position: relative;
+    top: -15px;
+    left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bottom {
+    position: relative;
+    bottom: -47%;
+    right: -80%;    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+dialog {
+    display: none;
+    position: relative;
+    z-index:1002;
+  
+  }
+  
+  dialog[open="open"] {
+      display: block;
+      color: white;
+      top: 200px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(rgb(51, 49, 49), rgb(36, 34, 34));
+  }
+  
+  @media (min-width: 30em) { 
+    dialog {
+      width: 20em; 
+    }
+  }
+
+  dialog::backdrop, #backdrop {      
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);    
+  }
+ 
+
+.footer {
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100%;
+    height: 30px;
+
+}

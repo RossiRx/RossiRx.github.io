@@ -13,18 +13,26 @@
  */
 
 
-
-
-interface Vorlage {         //Interface als BluePrint für meine Objekte
-    eintrag: string[];
-    checked: boolean[];
+                                    //Interface als BluePrint für mein Objekt
+interface Vorlage {
+    eintrag: string;
+    checked: boolean;
 }
 
-                            //Objekte ... Typisierung erfolgt durch Interface
-var abc: Vorlage = {                        
-    eintrag: ["Lorem" , "Ipsum" , "Dolor"],
-    checked: [true    , false   , false]
-};
+var abc: Vorlage[] = [            //Objekte ... Typisierung erfolgt durch Interface
+    {
+        eintrag: "Lorem",
+        checked: true
+    },
+    {
+        eintrag: "Ipsum",
+        checked: false
+    },
+    {
+        eintrag: "Dolor",
+        checked: false
+    }
+];
 
 
 /**
@@ -73,7 +81,7 @@ function drawListToDOM(): void {
     todosDOMElement.innerHTML = "";
 
     // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
-    for (let index: number = 0; index < abc.eintrag.length; index++) {
+    for (let index: number = 0; index < abc.length; index++) {
 
         /**
          * Neues DIV-Element erstellen (würde auch mit innerHTML = "<div class='todo'></div>" gehen, 
@@ -92,8 +100,8 @@ function drawListToDOM(): void {
          * ein Wert einer Variablen benötigt (bspw. für die CSS Klasse oder für den ToDo-Text),
          * hier muss die Zeichenkette unterbrochen werden.
          */
-        todo.innerHTML =  "<span class='check " + abc.checked[index] + "'><i class='fas fa-check'></i></span>"
-                            + abc.eintrag[index] +
+        todo.innerHTML =  "<span class='check " + abc[index].checked + "'><i class='fas fa-check'></i></span>"
+                            + abc[index].eintrag +
                             "<span class='trash fas fa-trash-alt'></span>";
 
         // Zuweisen der Event-Listener für den Check- und den Trash-Button
@@ -128,12 +136,12 @@ function updateCounter(): void {
     var erledigt: number = 0;
     var offen: number = 0;
 
-    for (let index = 0; index < abc.checked.length; index++) {
-       if (abc.checked[index] == true) {erledigt++}
+    for (let index = 0; index < abc.length; index++) {
+       if (abc[index].checked == true) {erledigt++}
        else {offen++}
     }
 
-    counterDOMElement.innerHTML = abc.eintrag.length + " insgesamt  " + erledigt + " erledigt " + offen + " offen";
+    counterDOMElement.innerHTML = abc.length + " insgesamt  " + erledigt + " erledigt " + offen + " offen";
 }
 
 /**
@@ -153,8 +161,12 @@ function addTodo(): void {
          * Status der ToDos abbildet, für dieses ToDo (weil selbe Stelle im Array)
          * der Status "unchecked", hier false, gepusht.
          */
-        abc.eintrag.push(inputDOMElement.value);
-        abc.checked.push(false);
+        abc.unshift(
+            {
+            eintrag: inputDOMElement.value,
+            checked: false
+            }
+        );
         
         // Jetzt wird der Text aus dem Eingabefeld gelöscht
         inputDOMElement.value = "";
@@ -185,7 +197,7 @@ function toggleCheckState(index: number): void {
      * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
      * Kurs behandelt wurden) nutzen.
      */
-    abc.checked[index] = !abc.checked[index];
+    abc[index].checked = !abc[index].checked;
 
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
@@ -204,8 +216,8 @@ function deleteTodo(index: number): void {
      * Jetzt muss diese Stelle beider Arrays gelöscht werden,
      * das ToDo-Text-Array und das Checked/Unchecked-Array
      */
-    abc.eintrag.splice(index, 1);
-    abc.checked.splice(index, 1);
+    abc.splice(index, 1);
+    abc.splice(index, 1);
     
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
@@ -225,8 +237,11 @@ window.addEventListener("load", function(): void {
         indexes: ["erstelle Aufgabe *"],   //nötige befehle können website artyom.js entnommen werden
         smart: true,
         action: function(i: any, wildcard: string): void {
-            abc.eintrag.push(wildcard);
-            abc.checked.push(false);
+            abc.push({
+                eintrag: (wildcard),
+                checked: false 
+            }
+            );
             drawListToDOM();
             console.log("Neue Aufgabe wird erstellt:" + wildcard);
         }

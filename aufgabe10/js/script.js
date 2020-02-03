@@ -11,11 +11,20 @@
  * Werte, bspw. Stelle 0 im Array todosText und Stelle 0 im Array
  * todosChecked gehören zusammen zu einem ToDo.
  */
-//Objekte ... Typisierung erfolgt durch Interface
-var abc = {
-    eintrag: ["Lorem", "Ipsum", "Dolor"],
-    checked: [true, false, false]
-};
+var abc = [
+    {
+        eintrag: "Lorem",
+        checked: true
+    },
+    {
+        eintrag: "Ipsum",
+        checked: false
+    },
+    {
+        eintrag: "Dolor",
+        checked: false
+    }
+];
 /**
  * Die Anwendung wird immer wieder auf die selben
  * DOM-Elemente zugreifen müssen. Damit diese Elemente nicht
@@ -72,8 +81,8 @@ function drawListToDOM() {
          * ein Wert einer Variablen benötigt (bspw. für die CSS Klasse oder für den ToDo-Text),
          * hier muss die Zeichenkette unterbrochen werden.
          */
-        todo.innerHTML = "<span class='check " + abc.checked[index] + "'><i class='fas fa-check'></i></span>"
-            + abc.eintrag[index] +
+        todo.innerHTML = "<span class='check " + abc[index].checked + "'><i class='fas fa-check'></i></span>"
+            + abc[index].eintrag +
             "<span class='trash fas fa-trash-alt'></span>";
         // Zuweisen der Event-Listener für den Check- und den Trash-Button
         todo.querySelector(".check").addEventListener("click", function () {
@@ -92,7 +101,7 @@ function drawListToDOM() {
         todosDOMElement.insertBefore(todo, todosDOMElement.childNodes[0]);
     };
     // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
-    for (var index = 0; index < abc.eintrag.length; index++) {
+    for (var index = 0; index < abc.length; index++) {
         _loop_1(index);
     }
     updateCounter();
@@ -101,15 +110,15 @@ function drawListToDOM() {
 function updateCounter() {
     var erledigt = 0;
     var offen = 0;
-    for (var index = 0; index < abc.checked.length; index++) {
-        if (abc.checked[index] == true) {
+    for (var index = 0; index < abc.length; index++) {
+        if (abc[index].checked == true) {
             erledigt++;
         }
         else {
             offen++;
         }
     }
-    counterDOMElement.innerHTML = abc.eintrag.length + " insgesamt  " + erledigt + " erledigt " + offen + " offen";
+    counterDOMElement.innerHTML = abc.length + " insgesamt  " + erledigt + " erledigt " + offen + " offen";
 }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
@@ -128,8 +137,10 @@ function addTodo() {
          * Status der ToDos abbildet, für dieses ToDo (weil selbe Stelle im Array)
          * der Status "unchecked", hier false, gepusht.
          */
-        abc.eintrag.push(inputDOMElement.value);
-        abc.checked.push(false);
+        abc.unshift({
+            eintrag: inputDOMElement.value,
+            checked: false
+        });
         // Jetzt wird der Text aus dem Eingabefeld gelöscht
         inputDOMElement.value = "";
         /**
@@ -156,7 +167,7 @@ function toggleCheckState(index) {
      * Alternativ könnte man hier natürlich auch andere Schreibweisen (wie sie im
      * Kurs behandelt wurden) nutzen.
      */
-    abc.checked[index] = !abc.checked[index];
+    abc[index].checked = !abc[index].checked;
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert
@@ -173,8 +184,8 @@ function deleteTodo(index) {
      * Jetzt muss diese Stelle beider Arrays gelöscht werden,
      * das ToDo-Text-Array und das Checked/Unchecked-Array
      */
-    abc.eintrag.splice(index, 1);
-    abc.checked.splice(index, 1);
+    abc.splice(index, 1);
+    abc.splice(index, 1);
     /**
      * Die zentrale Funktion, um die Liste des ToDo-Arrays in den DOM zu rendern
      * wird wieder getriggert
@@ -187,8 +198,10 @@ window.addEventListener("load", function () {
         indexes: ["erstelle Aufgabe *"],
         smart: true,
         action: function (i, wildcard) {
-            abc.eintrag.push(wildcard);
-            abc.checked.push(false);
+            abc.push({
+                eintrag: (wildcard),
+                checked: false
+            });
             drawListToDOM();
             console.log("Neue Aufgabe wird erstellt:" + wildcard);
         }
