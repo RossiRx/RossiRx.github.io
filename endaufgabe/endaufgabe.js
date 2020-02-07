@@ -246,8 +246,8 @@ window.addEventListener("load", function () {
 });
 //Funktion zum Neustarten des Spiels
 function renewGame() {
-    while (player.handCards.length > 0) {
-        player.handCards.pop();
+    while (player.handCards.length > 0) { //Nach beendetem Spiel werden hier durch jeweils eine 
+        player.handCards.pop(); //While-Schleife die vier Kartenstapel Arrays geleert
     }
     while (enemy.handCards.length > 0) {
         enemy.handCards.pop();
@@ -258,16 +258,14 @@ function renewGame() {
     while (openCards.length > 0) {
         openCards.pop();
     }
-    startGame();
+    startGame(); //Sind alle Kartenstapel geleert wird die Startfunktion wieder aufgerufen
 }
 //Funktion für Pop-Up-Meldung
 function toggleDialog(html) {
     console.log("in toggle");
     var dialog = document.querySelector('dialog'), closebutton = document.getElementById('close-dialog'), pagebackground = document.querySelector('body');
     if (!dialog.hasAttribute('open')) {
-        // show the dialog 
         dialog.setAttribute('open', 'open');
-        // after displaying the dialog, focus the closebutton inside it
         closebutton.focus();
         closebutton.addEventListener('click', toggleDialog);
         document.querySelector("#gameOverText").innerHTML = "" + html;
